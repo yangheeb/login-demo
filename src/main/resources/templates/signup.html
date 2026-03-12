@@ -13,12 +13,13 @@
         <input type="password" name="password" placeholder="Password"/>
     </div>
     <div>
-        <select name="role">
-            <option value="USER">일반 사용자</option>
-            <option value="ADMIN">관리자</option>
-        </select>
+        <p>권한 선택</p>
+        <label><input type="checkbox" name="authorities" value="ROLE_USER"/> 일반 사용자</label>
+        <label><input type="checkbox" name="authorities" value="ROLE_ADMIN"/> 관리자</label>
+        <label><input type="checkbox" name="authorities" value="ROLE_MANAGER"/> 매니저</label>
+        <label><input type="checkbox" name="authorities" value="ROLE_VIEWER"/> 뷰어</label>
     </div>
-    <input type="submit" value="회원가입" />
+    <input type="submit" value="회원가입"/>
 </form>
 <p>이미 계정이 있으신가요? <a th:href="@{/login}">로그인</a></p>
 </body>
