@@ -1,5 +1,6 @@
 package dev.fisa.logindemo.repository;
 
+import dev.fisa.logindemo.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
