@@ -21,8 +21,11 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
                     regexMatcher("/main"),
-                    regexMatcher("/signup"))
+                    regexMatcher("/signup")
+                )
                 .permitAll()
+                .requestMatchers(regexMatcher("/admin")).hasAuthority("ROLE_ADMIN")
+                .requestMatchers(regexMatcher("/user")).hasAuthority("ROLE_USER")
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form

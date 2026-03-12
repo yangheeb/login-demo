@@ -35,7 +35,7 @@ public class User {
     // 한 명의 사용자는 여러 개의 권한을 가질 수 있음
     // ex) ROLE_USER, ROLE_ADMIN
     @Setter
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Authority> authorities;
 
 }

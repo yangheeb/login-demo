@@ -10,23 +10,5 @@
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Logout" />
 </form>
-
-<table>
-    <thead>
-    <tr>3
-        <th> 상품명 </th>
-        <th> 가격 </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:if="${products.empty}">
-        <td colspan="2"> 상품이 존재하지 않습니다. </td>
-    </tr>
-    <tr th:each="product : ${products}">
-        <td><span th:text="${product.name}"> 상품명 </span></td>
-        <td><span th:text="${product.price}"> 가격 </span></td>
-    </tr>
-    </tbody>
-</table>
 </body>
 </html>
